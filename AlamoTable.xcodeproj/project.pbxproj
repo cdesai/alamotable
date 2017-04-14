@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5711B2C8F7298B96DC8C76CD /* Pods_AlamoTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A1ABE39659F1F0C791380A6 /* Pods_AlamoTable.framework */; };
 		8244A4411EA059C30088F2AD /* TrackViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8244A4401EA059C30088F2AD /* TrackViewCell.swift */; };
+		8244A4431EA05C0D0088F2AD /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8244A4421EA05C0D0088F2AD /* Track.swift */; };
 		82973FF91E934195008361C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82973FF81E934195008361C6 /* AppDelegate.swift */; };
 		82973FFB1E934195008361C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82973FFA1E934195008361C6 /* ViewController.swift */; };
 		82973FFE1E934195008361C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82973FFC1E934195008361C6 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		7F101E5D2F9A231C512B08C8 /* Pods-AlamoTable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlamoTable.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AlamoTable/Pods-AlamoTable.debug.xcconfig"; sourceTree = "<group>"; };
 		8244A4401EA059C30088F2AD /* TrackViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackViewCell.swift; sourceTree = "<group>"; };
+		8244A4421EA05C0D0088F2AD /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		82973FF51E934195008361C6 /* AlamoTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlamoTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82973FF81E934195008361C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82973FFA1E934195008361C6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,11 +75,12 @@
 			children = (
 				82973FF81E934195008361C6 /* AppDelegate.swift */,
 				82973FFA1E934195008361C6 /* ViewController.swift */,
+				8244A4401EA059C30088F2AD /* TrackViewCell.swift */,
 				82973FFC1E934195008361C6 /* Main.storyboard */,
 				82973FFF1E934195008361C6 /* Assets.xcassets */,
 				829740011E934195008361C6 /* LaunchScreen.storyboard */,
 				829740041E934195008361C6 /* Info.plist */,
-				8244A4401EA059C30088F2AD /* TrackViewCell.swift */,
+				8244A4421EA05C0D0088F2AD /* Track.swift */,
 			);
 			path = AlamoTable;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				82973FFB1E934195008361C6 /* ViewController.swift in Sources */,
 				8244A4411EA059C30088F2AD /* TrackViewCell.swift in Sources */,
 				82973FF91E934195008361C6 /* AppDelegate.swift in Sources */,
+				8244A4431EA05C0D0088F2AD /* Track.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

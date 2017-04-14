@@ -17,7 +17,6 @@ class AlamoTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
         // Get status bar height
         let statusBarHeight = UIApplication.shared.statusBarFrame.height
