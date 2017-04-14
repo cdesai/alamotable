@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="96" id="5la-e5-WFj">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="96" id="5la-e5-WFj" customClass="TrackViewCell" customModule="AlamoTable" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="96"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5la-e5-WFj" id="okv-w8-3Do">
@@ -58,6 +58,11 @@
                                         <constraint firstItem="9aa-Fi-QcJ" firstAttribute="top" secondItem="okv-w8-3Do" secondAttribute="topMargin" constant="5" id="yb2-fv-2iZ"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="albumImage" destination="9Bc-v9-oo1" id="yVc-iD-kuL"/>
+                                    <outlet property="artistName" destination="qQp-su-9Zd" id="fvN-mf-TX9"/>
+                                    <outlet property="trackName" destination="9aa-Fi-QcJ" id="wGD-rX-6I4"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
