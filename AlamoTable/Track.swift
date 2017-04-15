@@ -8,8 +8,16 @@
 
 import UIKit
 
-struct Track {
-    var albumImage: UIImage!
-    var trackName: String!
-    var artistName: String!
+class Track {
+    var albumImage: UIImage! = UIImage()
+    var trackName: String! = String()
+    var artistName: String! = String()
+    var previewURL: String! = String()
+    
+//    init(albumImage: UIImage, trackName: String, artistName: String, previewURL: String) {
+//        self.albumImage = albumImage
+//        self.trackName = trackName
+//        self.artistName = artistName
+//        self.previewURL = previewURL
+//    }
 }

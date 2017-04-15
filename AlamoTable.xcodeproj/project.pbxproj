@@ -76,11 +76,11 @@
 				82973FF81E934195008361C6 /* AppDelegate.swift */,
 				82973FFA1E934195008361C6 /* ViewController.swift */,
 				8244A4401EA059C30088F2AD /* TrackViewCell.swift */,
+				8244A4421EA05C0D0088F2AD /* Track.swift */,
 				82973FFC1E934195008361C6 /* Main.storyboard */,
 				82973FFF1E934195008361C6 /* Assets.xcassets */,
 				829740011E934195008361C6 /* LaunchScreen.storyboard */,
 				829740041E934195008361C6 /* Info.plist */,
-				8244A4421EA05C0D0088F2AD /* Track.swift */,
 			);
 			path = AlamoTable;
 			sourceTree = "<group>";

@@ -14,6 +14,7 @@ class AlamoTableViewController: UITableViewController {
 
     @IBOutlet var alamoView: UITableView!
     var arrayDict = [[String: Any]]()
+    var tracks = [Track]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +32,34 @@ class AlamoTableViewController: UITableViewController {
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
-                self.arrayDict = json["tracks"]["items"].arrayObject as! [[String : Any]]
+                if let items = json["tracks"]["items"].arrayObject as? [[String: Any]]{
+                    for item in items {
+                        let track = Track()
+                        if let artists = item["artists"] as? [[String: Any]] {
+                            for artist in artists {
+                                track.artistName = artist["name"]! as! String
+                            }
+                        }
+                        if let album = item["album"] as? [String: Any] {
+                            if let images = album["images"] as? [[String: Any]] {
+                                let image = images.first!
+                                let albumImageURL =  URL(string: image["url"] as! String)
+                                do {
+                                    let albumImageData = try Data(contentsOf: albumImageURL!)
+                                    let albumImage = UIImage(data: albumImageData )
+                                    track.albumImage = albumImage!
+                                } catch {
+                                    print(error)
+                                }
+                                track.trackName = item["name"]! as! String
+                                track.previewURL = item["preview_url"]! as! String
+        
+                                
+                            }
+                        }
+                        self.tracks.append(track)
+                    }
+                }
                 if self.arrayDict.count > 0 {
                     self.alamoView.reloadData()
                 }
@@ -47,16 +75,20 @@ class AlamoTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
-        var dict = arrayDict[indexPath.row]
-        cell.textLabel?.text = dict["name"] as? String
-        if let artists = dict["artists"] as? [[String: Any]] {
-            if artists.count > 0 {
-                for artist in artists {
-                    cell.detailTextLabel?.text = (artist["name"] as? String)!
-                }
-            }
-        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! TrackViewCell
+        let dict = tracks[indexPath.row]
+        cell.albumImage.image = dict.albumImage
+        cell.trackName.text = dict.trackName
+        cell.artistName.text = dict.artistName
+//        cell.textLabel?.text = dict.trackName
+//        cell.detailTextLabel?.text = dict.artistName
+//        if let artists = dict.artistName as? [[String: Any]] {
+//            if artists.count > 0 {
+//                for artist in artists {
+//                    cell.detailTextLabel?.text = (artist["name"] as? String)!
+//                }
+//            }
+//        }
         return cell
     }
 
