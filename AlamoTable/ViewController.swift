@@ -78,19 +78,13 @@ class AlamoTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! TrackViewCell
-        let dict = tracks[indexPath.row]
-        cell.albumImage.image = dict.albumImage
-        cell.trackName.text = dict.trackName
-        cell.artistName.text = dict.artistName
-//        cell.textLabel?.text = dict.trackName
-//        cell.detailTextLabel?.text = dict.artistName
-//        if let artists = dict.artistName as? [[String: Any]] {
-//            if artists.count > 0 {
-//                for artist in artists {
-//                    cell.detailTextLabel?.text = (artist["name"] as? String)!
-//                }
-//            }
-//        }
+        
+        let trackInfo = tracks[indexPath.row]
+        
+        cell.albumImage.image = trackInfo.albumImage
+        cell.trackName.text = trackInfo.trackName
+        cell.artistName.text = trackInfo.artistName
+        
         return cell
     }
 
