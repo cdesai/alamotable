@@ -55,7 +55,7 @@
 		82973FEC1E934195008361C6 = {
 			isa = PBXGroup;
 			children = (
-				82973FF71E934195008361C6 /* AlamoTable */,
+				82973FF71E934195008361C6 /* SpotASong */,
 				82973FF61E934195008361C6 /* Products */,
 				AB0F548147513922535F0EB7 /* Pods */,
 				657AAD9C39A91845B878A7B4 /* Frameworks */,
@@ -70,7 +70,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		82973FF71E934195008361C6 /* AlamoTable */ = {
+		82973FF71E934195008361C6 /* SpotASong */ = {
 			isa = PBXGroup;
 			children = (
 				82973FF81E934195008361C6 /* AppDelegate.swift */,
@@ -82,6 +82,7 @@
 				829740011E934195008361C6 /* LaunchScreen.storyboard */,
 				829740041E934195008361C6 /* Info.plist */,
 			);
+			name = SpotASong;
 			path = AlamoTable;
 			sourceTree = "<group>";
 		};
