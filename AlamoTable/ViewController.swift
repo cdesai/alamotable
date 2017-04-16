@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  SpotASong
+//  AlamoTable
 //
 //  Created by Chinmay Desai on 4/4/17.
 //  Copyright © 2017 Chinmay Desai. All rights reserved.

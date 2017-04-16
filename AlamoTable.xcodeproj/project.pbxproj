@@ -55,7 +55,7 @@
 		82973FEC1E934195008361C6 = {
 			isa = PBXGroup;
 			children = (
-				82973FF71E934195008361C6 /* SpotASong */,
+				82973FF71E934195008361C6 /* AlamoTable */,
 				82973FF61E934195008361C6 /* Products */,
 				AB0F548147513922535F0EB7 /* Pods */,
 				657AAD9C39A91845B878A7B4 /* Frameworks */,
@@ -70,7 +70,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		82973FF71E934195008361C6 /* SpotASong */ = {
+		82973FF71E934195008361C6 /* AlamoTable */ = {
 			isa = PBXGroup;
 			children = (
 				82973FF81E934195008361C6 /* AppDelegate.swift */,
@@ -82,7 +82,6 @@
 				829740011E934195008361C6 /* LaunchScreen.storyboard */,
 				829740041E934195008361C6 /* Info.plist */,
 			);
-			name = SpotASong;
 			path = AlamoTable;
 			sourceTree = "<group>";
 		};
@@ -135,7 +134,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 82973FF01E934195008361C6 /* Build configuration list for PBXProject "SpotASong" */;
+			buildConfigurationList = 82973FF01E934195008361C6 /* Build configuration list for PBXProject "AlamoTable" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -374,7 +373,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		82973FF01E934195008361C6 /* Build configuration list for PBXProject "SpotASong" */ = {
+		82973FF01E934195008361C6 /* Build configuration list for PBXProject "AlamoTable" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				829740051E934195008361C6 /* Debug */,
