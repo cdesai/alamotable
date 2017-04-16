@@ -72,9 +72,6 @@
                             <outlet property="delegate" destination="LMV-7Z-xh9" id="KHx-BC-9em"/>
                         </connections>
                     </tableView>
-                    <connections>
-                        <outlet property="alamoView" destination="I9k-Yv-9Pm" id="HAT-mU-axD"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W72-WK-idk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

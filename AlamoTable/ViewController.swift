@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  AlamoTable
+//  SpotASong
 //
 //  Created by Chinmay Desai on 4/4/17.
 //  Copyright © 2017 Chinmay Desai. All rights reserved.
@@ -12,8 +12,6 @@ import SwiftyJSON
 
 class AlamoTableViewController: UITableViewController {
 
-    @IBOutlet var alamoView: UITableView!
-    var arrayDict = [[String: Any]]()
     var tracks = [Track]()
     
     override func viewDidLoad() {
@@ -63,7 +61,7 @@ class AlamoTableViewController: UITableViewController {
                     }
                 }
                 if self.tracks.count > 0 {
-                    self.alamoView.reloadData()
+                    self.tableView.reloadData()
                 }
             case .failure(let error):
                 print(error)

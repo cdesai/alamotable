@@ -134,7 +134,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 82973FF01E934195008361C6 /* Build configuration list for PBXProject "AlamoTable" */;
+			buildConfigurationList = 82973FF01E934195008361C6 /* Build configuration list for PBXProject "SpotASong" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -350,7 +350,7 @@
 				DEVELOPMENT_TEAM = FY8PBVAMLP;
 				INFOPLIST_FILE = AlamoTable/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = studio.mavin.AlamoTable;
+				PRODUCT_BUNDLE_IDENTIFIER = studio.mavin.SpotASong;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -364,7 +364,7 @@
 				DEVELOPMENT_TEAM = FY8PBVAMLP;
 				INFOPLIST_FILE = AlamoTable/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = studio.mavin.AlamoTable;
+				PRODUCT_BUNDLE_IDENTIFIER = studio.mavin.SpotASong;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -373,7 +373,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		82973FF01E934195008361C6 /* Build configuration list for PBXProject "AlamoTable" */ = {
+		82973FF01E934195008361C6 /* Build configuration list for PBXProject "SpotASong" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				829740051E934195008361C6 /* Debug */,

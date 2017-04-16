@@ -17,7 +17,7 @@
                BlueprintIdentifier = "82973FF41E934195008361C6"
                BuildableName = "AlamoTable.app"
                BlueprintName = "AlamoTable"
-               ReferencedContainer = "container:AlamoTable.xcodeproj">
+               ReferencedContainer = "container:SpotASong.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
             BlueprintIdentifier = "82973FF41E934195008361C6"
             BuildableName = "AlamoTable.app"
             BlueprintName = "AlamoTable"
-            ReferencedContainer = "container:AlamoTable.xcodeproj">
+            ReferencedContainer = "container:SpotASong.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -58,7 +58,7 @@
             BlueprintIdentifier = "82973FF41E934195008361C6"
             BuildableName = "AlamoTable.app"
             BlueprintName = "AlamoTable"
-            ReferencedContainer = "container:AlamoTable.xcodeproj">
+            ReferencedContainer = "container:SpotASong.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -77,7 +77,7 @@
             BlueprintIdentifier = "82973FF41E934195008361C6"
             BuildableName = "AlamoTable.app"
             BlueprintName = "AlamoTable"
-            ReferencedContainer = "container:AlamoTable.xcodeproj">
+            ReferencedContainer = "container:SpotASong.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
