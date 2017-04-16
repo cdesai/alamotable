@@ -27,6 +27,8 @@ class AlamoTableViewController: UITableViewController {
         tableView.contentInset = insets
         tableView.scrollIndicatorInsets = insets
         
+        tableView.rowHeight = 100
+        
         let endpoint = "https://api.spotify.com/v1/search?q=Chillstep&type=track&offset=0"
         Alamofire.request(endpoint).validate().responseJSON { (response) in
             switch response.result {
@@ -60,7 +62,7 @@ class AlamoTableViewController: UITableViewController {
                         self.tracks.append(track)
                     }
                 }
-                if self.arrayDict.count > 0 {
+                if self.tracks.count > 0 {
                     self.alamoView.reloadData()
                 }
             case .failure(let error):
@@ -71,7 +73,7 @@ class AlamoTableViewController: UITableViewController {
 
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arrayDict.count
+        return tracks.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
