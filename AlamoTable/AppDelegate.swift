@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let trackPlayer = AVAudioPlayer()
+        let track = Track()
+        
+        let navController = window!.rootViewController as! UINavigationController
+        let trackPlayerController = navController.topViewController as! TrackPlayer
+        trackPlayerController.previewTrack = track
+        trackPlayerController.trackPlayer = trackPlayer
         return true
     }
 

@@ -16,7 +16,8 @@ class TrackPlayer: UIViewController {
     @IBOutlet var trackName: UILabel!
     @IBOutlet var playPauseButton: UIButton!
     
-    var previewTrack = Track()
+    var previewTrack: Track!
+    var trackPlayer: AVAudioPlayer!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -26,4 +27,12 @@ class TrackPlayer: UIViewController {
         trackName.text = previewTrack.trackName
     }
     
+    func playTrack(url: URL) {
+        do {
+            trackPlayer =  try AVAudioPlayer(contentsOf: url)
+        } catch {
+            print(error)
+        }
+        
+    }
 }
