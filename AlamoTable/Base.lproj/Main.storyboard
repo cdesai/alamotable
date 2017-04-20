@@ -71,6 +71,7 @@
                                     <outlet property="albumImage" destination="9Bc-v9-oo1" id="yVc-iD-kuL"/>
                                     <outlet property="artistName" destination="qQp-su-9Zd" id="fvN-mf-TX9"/>
                                     <outlet property="trackName" destination="9aa-Fi-QcJ" id="wGD-rX-6I4"/>
+                                    <segue destination="u1t-ZP-j7m" kind="show" id="S8c-oG-yOK"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -81,14 +82,95 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Spot a Song" id="bMG-ZN-Zd4"/>
-                    <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="searchBar" destination="kMl-cO-Ueq" id="ptw-QM-i5B"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W72-WK-idk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="343.19999999999999" y="11.244377811094454"/>
+            <point key="canvasLocation" x="393" y="10"/>
+        </scene>
+        <!--Track Player-->
+        <scene sceneID="rnZ-9k-5lB">
+            <objects>
+                <viewController id="u1t-ZP-j7m" customClass="TrackPlayer" customModule="AlamoTable" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EC9-Bz-1ao"/>
+                        <viewControllerLayoutGuide type="bottom" id="lk8-DE-GoR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AFR-qE-QL8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5wD-Fa-Xa9">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SWw-Dv-v5N">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="WMu-re-swm">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="twr-dI-3pj">
+                                            <rect key="frame" x="27" y="50" width="320" height="300"/>
+                                        </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJB-r8-4kA">
+                                            <rect key="frame" x="160" y="561" width="55" height="36"/>
+                                            <accessibility key="accessibilityConfiguration">
+                                                <accessibilityTraits key="traits" button="YES" playsSound="YES"/>
+                                            </accessibility>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <state key="normal" title="Pause"/>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MIT-Gb-7hv">
+                                            <rect key="frame" x="27" y="358" width="320" height="60"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="60" id="ZSF-s3-S6f"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                            <color key="textColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="MIT-Gb-7hv" secondAttribute="trailing" constant="28" id="0XK-kT-Bqb"/>
+                                        <constraint firstItem="twr-dI-3pj" firstAttribute="leading" secondItem="WMu-re-swm" secondAttribute="leading" constant="27" id="1g3-6R-MXZ"/>
+                                        <constraint firstItem="twr-dI-3pj" firstAttribute="centerX" secondItem="WMu-re-swm" secondAttribute="centerX" id="8bh-gC-ULz"/>
+                                        <constraint firstItem="AJB-r8-4kA" firstAttribute="centerX" secondItem="WMu-re-swm" secondAttribute="centerX" id="Dm6-f0-1iB"/>
+                                        <constraint firstAttribute="bottom" secondItem="MIT-Gb-7hv" secondAttribute="bottom" constant="205" id="U17-Fn-pKU"/>
+                                        <constraint firstItem="MIT-Gb-7hv" firstAttribute="top" secondItem="twr-dI-3pj" secondAttribute="bottom" constant="8" id="e89-zA-mqB"/>
+                                        <constraint firstItem="twr-dI-3pj" firstAttribute="top" secondItem="WMu-re-swm" secondAttribute="top" constant="50" id="fpL-XQ-Qyb"/>
+                                        <constraint firstAttribute="bottom" secondItem="AJB-r8-4kA" secondAttribute="bottom" constant="26" id="gnW-s6-0p4"/>
+                                        <constraint firstItem="MIT-Gb-7hv" firstAttribute="top" secondItem="twr-dI-3pj" secondAttribute="bottom" constant="8" id="jvY-MA-nih"/>
+                                        <constraint firstItem="MIT-Gb-7hv" firstAttribute="centerX" secondItem="twr-dI-3pj" secondAttribute="centerX" id="sQo-CT-xYj"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SWw-Dv-v5N" firstAttribute="top" secondItem="EC9-Bz-1ao" secondAttribute="bottom" constant="-20" id="EKU-5q-o6A"/>
+                            <constraint firstItem="5wD-Fa-Xa9" firstAttribute="top" secondItem="AFR-qE-QL8" secondAttribute="top" id="FcS-Xu-Li6"/>
+                            <constraint firstItem="lk8-DE-GoR" firstAttribute="top" secondItem="SWw-Dv-v5N" secondAttribute="bottom" id="Iq7-1x-a5Z"/>
+                            <constraint firstItem="SWw-Dv-v5N" firstAttribute="leading" secondItem="AFR-qE-QL8" secondAttribute="leadingMargin" constant="-16" id="NYo-Vo-rAR"/>
+                            <constraint firstItem="lk8-DE-GoR" firstAttribute="top" secondItem="5wD-Fa-Xa9" secondAttribute="bottom" id="W2Y-ID-I3w"/>
+                            <constraint firstItem="5wD-Fa-Xa9" firstAttribute="leading" secondItem="AFR-qE-QL8" secondAttribute="leading" id="fmu-5D-gAG"/>
+                            <constraint firstAttribute="trailing" secondItem="5wD-Fa-Xa9" secondAttribute="trailing" id="mUq-GZ-LuW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SWw-Dv-v5N" secondAttribute="trailing" constant="-16" id="opu-UF-Pw4"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <connections>
+                        <outlet property="albumArtImage" destination="twr-dI-3pj" id="0ZN-q4-Bqs"/>
+                        <outlet property="backgroundImage" destination="5wD-Fa-Xa9" id="D8J-ad-i82"/>
+                        <outlet property="playPauseButton" destination="AJB-r8-4kA" id="kZ8-SA-LsF"/>
+                        <outlet property="trackName" destination="MIT-Gb-7hv" id="mYf-MG-sxH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k8Z-85-TMt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1300" y="11"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CZE-6E-kvN">

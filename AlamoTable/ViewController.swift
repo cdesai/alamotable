@@ -30,10 +30,9 @@ class AlamoTableViewController: UITableViewController, UISearchBarDelegate {
 
         // Endpoint to grab all tracks for the search keyword
         let searchURL = "https://api.spotify.com/v1/search?q=\(convertedKeywords!)&type=track"
-        
-        print(searchURL)
+        tracks = []
         getRequest(searchURL: searchURL)
-        //self.view.endEditing(true)
+        self.view.endEditing(true)
     }
     
     func getRequest(searchURL: String) {
@@ -115,6 +114,11 @@ class AlamoTableViewController: UITableViewController, UISearchBarDelegate {
         cell.artistName.text = trackInfo.artistName
         
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let tvc = segue.destination as! TrackPlayer
+        tvc.previewTrack = tracks[(self.tableView.indexPathForSelectedRow?.row)!]
     }
 
 }
