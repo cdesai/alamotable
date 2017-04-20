@@ -79,8 +79,6 @@ class AlamoTableViewController: UITableViewController, UISearchBarDelegate {
                                 
                                 // Extract and store previewURL i.e. url of the preview track to play later and store to the Track object
                                 track.previewURL = item["preview_url"]! as! String
-                                
-                                
                             }
                         }
                         
@@ -117,8 +115,14 @@ class AlamoTableViewController: UITableViewController, UISearchBarDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let tvc = segue.destination as! TrackPlayer
-        tvc.previewTrack = tracks[(self.tableView.indexPathForSelectedRow?.row)!]
+        
+        switch (segue.identifier!){
+        case "previewTrack":
+            let tvc = segue.destination as! TrackPlayer
+            tvc.previewTrack = tracks[(self.tableView.indexPathForSelectedRow?.row)!]
+        default:
+            print("No such segue identifier found.")
+        }
     }
 
 }

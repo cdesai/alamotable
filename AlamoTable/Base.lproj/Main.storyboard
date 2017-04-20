@@ -31,7 +31,7 @@
                                 <rect key="frame" x="0.0" y="72" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5la-e5-WFj" id="okv-w8-3Do">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Bc-v9-oo1">
@@ -71,7 +71,7 @@
                                     <outlet property="albumImage" destination="9Bc-v9-oo1" id="yVc-iD-kuL"/>
                                     <outlet property="artistName" destination="qQp-su-9Zd" id="fvN-mf-TX9"/>
                                     <outlet property="trackName" destination="9aa-Fi-QcJ" id="wGD-rX-6I4"/>
-                                    <segue destination="u1t-ZP-j7m" kind="show" id="S8c-oG-yOK"/>
+                                    <segue destination="u1t-ZP-j7m" kind="show" identifier="previewTrack" id="S8c-oG-yOK"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
