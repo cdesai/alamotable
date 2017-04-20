@@ -14,24 +14,24 @@ class AlamoTableViewController: UITableViewController {
 
     var tracks = [Track]()
     
+    @IBOutlet var searchBar: UISearchBar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Get status bar height
-        let statusBarHeight = UIApplication.shared.statusBarFrame.height
-        
-        // Add insets to Tableview top
-        let insets = UIEdgeInsets(top: statusBarHeight, left: 0, bottom: 0, right: 0)
-        tableView.contentInset = insets
-        tableView.scrollIndicatorInsets = insets
-        
+        // Set custom row height of the cell
         tableView.rowHeight = 100
         
         // Endpoint to grab all tracks for the search keyword
         let endpoint = "https://api.spotify.com/v1/search?q=Chillstep&type=track&offset=0"
         
+        getRequest(searchURL: endpoint)
+        
+    }
+
+    func getRequest(searchURL: String) {
         // GET request using SwiftyJSON method for Alamofire
-        Alamofire.request(endpoint).validate().responseJSON { (response) in
+        Alamofire.request(searchURL).validate().responseJSON { (response) in
             switch response.result {
             case .success(let value):
                 
@@ -73,7 +73,7 @@ class AlamoTableViewController: UITableViewController {
                                 
                                 // Extract and store previewURL i.e. url of the preview track to play later and store to the Track object
                                 track.previewURL = item["preview_url"]! as! String
-        
+                                
                                 
                             }
                         }
@@ -90,8 +90,8 @@ class AlamoTableViewController: UITableViewController {
                 print(error)
             }
         }
-    }
 
+    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tracks.count
