@@ -25,11 +25,23 @@ class TrackPlayer: UIViewController {
         backgroundImage.image = previewTrack.albumImage
         albumArtImage.image = previewTrack.albumImage
         trackName.text = previewTrack.trackName
+        downloadPreviewTrackFromURL(url: URL(string: previewTrack.previewURL)!)
+    }
+    
+    func downloadPreviewTrackFromURL(url: URL) {
+        var downloadTask = URLSessionDownloadTask()
+        downloadTask = URLSession.shared.downloadTask(with: url, completionHandler: { (downloadedUrl, response, error) in
+            self.playTrack(url: downloadedUrl!)
+        })
+        
+        downloadTask.resume()
     }
     
     func playTrack(url: URL) {
         do {
             trackPlayer =  try AVAudioPlayer(contentsOf: url)
+            trackPlayer.prepareToPlay()
+            trackPlayer.play()
         } catch {
             print(error)
         }
