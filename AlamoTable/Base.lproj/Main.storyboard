@@ -121,6 +121,9 @@
                                             </accessibility>
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <state key="normal" title="Pause"/>
+                                            <connections>
+                                                <action selector="pauseTrack:" destination="u1t-ZP-j7m" eventType="touchUpInside" id="DV9-p6-2qq"/>
+                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MIT-Gb-7hv">
                                             <rect key="frame" x="27" y="358" width="320" height="60"/>

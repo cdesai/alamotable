@@ -26,6 +26,14 @@ class TrackPlayer: UIViewController {
         albumArtImage.image = previewTrack.albumImage
         trackName.text = previewTrack.trackName
         downloadPreviewTrackFromURL(url: URL(string: previewTrack.previewURL)!)
+        
+        playPauseButton.setTitle("Pause", for: .normal)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        
+        trackPlayer.stop()
     }
     
     func downloadPreviewTrackFromURL(url: URL) {
@@ -46,5 +54,19 @@ class TrackPlayer: UIViewController {
             print(error)
         }
         
+    }
+    
+    @IBAction func pauseTrack(_ sender: UIButton) {
+        switch(sender.currentTitle!) {
+        case "Pause":
+            playPauseButton.setTitle("Play", for: .normal)
+            trackPlayer.pause()
+        case "Play":
+            playPauseButton.setTitle("Pause", for: .normal)
+            trackPlayer.play()
+        default:
+            print("No such action")
+            
+        }
     }
 }
