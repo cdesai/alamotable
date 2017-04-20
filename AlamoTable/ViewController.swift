@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class AlamoTableViewController: UITableViewController {
+class AlamoTableViewController: UITableViewController, UISearchBarDelegate {
 
     var tracks = [Track]()
     
@@ -21,14 +21,21 @@ class AlamoTableViewController: UITableViewController {
         
         // Set custom row height of the cell
         tableView.rowHeight = 100
-        
-        // Endpoint to grab all tracks for the search keyword
-        let endpoint = "https://api.spotify.com/v1/search?q=Chillstep&type=track&offset=0"
-        
-        getRequest(searchURL: endpoint)
-        
     }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        let keywords = searchBar.text
+        
+        let convertedKeywords = keywords?.replacingOccurrences(of: " ", with: "+")
 
+        // Endpoint to grab all tracks for the search keyword
+        let searchURL = "https://api.spotify.com/v1/search?q=\(convertedKeywords!)&type=track"
+        
+        print(searchURL)
+        getRequest(searchURL: searchURL)
+        //self.view.endEditing(true)
+    }
+    
     func getRequest(searchURL: String) {
         // GET request using SwiftyJSON method for Alamofire
         Alamofire.request(searchURL).validate().responseJSON { (response) in
