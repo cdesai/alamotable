@@ -29,7 +29,8 @@ Please feel free to comment and suggest on quality of the code and any flaws.
 
 Thank you and hope you will find it useful.
 
- This is how the final app will look like.
+## Screenshots
+This is how the final app will look like.
 
 ![AlamoTable Home Screen](/screenshots/alamo-table-homescreen.png "AlamoTable Demo App")
 ![AlamoTable Play Track Screen](/screenshots/alamo-table-song-preview.png "AlamoTable Demo App")
