@@ -5,6 +5,12 @@ You will need following Pods to be added:
 - Alamofire
 - SwiftyJSON
 
+How to run this project:
+1. Download or clone repo.
+2. Run `pod init` to install all pods.
+3. Open `AlamoTable.xcworkspace`.
+4. Run the app in simulator or device
+
 This demo app covers following concepts:
 - Table View Controllers
 - UIImage, UILabel, UISearchBar
@@ -23,6 +29,7 @@ Please feel free to comment and suggest on quality of the code and any flaws.
 
 Thank you and hope you will find it useful.
 
+ This is how the final app will look like.
 
-
-
+![AlamoTable Home Screen](/screenshots/alamo-table-homescreen.png "AlamoTable Demo App")
+![AlamoTable Play Track Screen](/screenshots/alamo-table-song-preview.png "AlamoTable Demo App")
