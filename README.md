@@ -32,5 +32,5 @@ Thank you and hope you will find it useful.
 ## Screenshots
 This is how the final app will look like.
 
-![AlamoTable Home Screen](/screenshots/alamo-table-homescreen.png "AlamoTable Demo App")
-![AlamoTable Play Track Screen](/screenshots/alamo-table-song-preview.png "AlamoTable Demo App")
+<img src="https://github.com/cdesai/alamotable/blob/AlamoSpot/screenshots/alamo-table-homescreen.png" width="350" alt="AlamoTable - Home Screen">
+<img src="https://github.com/cdesai/alamotable/blob/AlamoSpot/screenshots/alamo-table-song-preview.png" width="350" alt="AlamoTable - Play Track Screen">
